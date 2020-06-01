@@ -1,0 +1,79 @@
+﻿
+
+<!--Username-Password OAuth Authentication Flow-->
+
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="./css/sb-admin-2.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/Style.css" />
+    <script src="./Scripts/jquery-1.10.2.min.js"></script>
+    <script src="./Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div style="width:100%">
+        <div class="row">
+            <div class="col-xl-4 col-sm-4" style="margin-top:40px;">
+                <div class="card mb-1 m-auto" style="text-align:center">
+                    <div class="card-header">
+                        Retrieve Access Token with Username-Password OAuth
+                    </div>
+                    <div class="card-body">
+                        <button class="btn btn-primary btn-sm" onclick="UserPass()" id="getTokenUserPass">Get Token</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-sm-4" style="margin-top:40px;">
+                <div class="card mb-1 m-auto" style="text-align:center">
+                    <div class="card-header">
+                        Login using User-Agent OAuth Flow
+                    </div>
+                    <div class="card-body">
+                        <button class="btn btn-primary btn-sm" onclick="UserAgent()" id="getTokenUserAgent">Login</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-sm-4" style="margin-top:40px;">
+                <div class="card mb-1 m-auto" style="text-align:center">
+                    <div class="card-header">
+                        Login and get Token using Web-Server OAuth Flow
+                    </div>
+                    <div class="card-body">
+                        <button class="btn btn-primary btn-sm" onclick="WebServer()" id="getTokenWebServer">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-sm-6" style="margin-top:40px; margin-left:25%; margin-right:25%">
+            <div class="card mb-1" id="apiFields" style="text-align:center; display:none;">
+                <div class="card-header">
+                    Use a Salesforce API to retrieve data
+                </div>
+                <div class="card-body">
+                    <table class="m-auto">
+                        <tr>
+                            <td>url = https://na174.lightning.force.com/services/data/v39.0/ </td>
+                            <td><input type="text" id="apiURL" /></td>
+                        </tr>
+                        <tr>
+                            <td>Request Method:</td>
+                            <td><input type="text" id="apiMethod" /></td>
+                        </tr>
+                        <tr>
+                            <td>Request Body:</td>
+                            <td><input type="text" id="requestBody"</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    <input type="button" class="btn btn-primary btn-sm" onclick="apiCall(document.getElementById('apiURL').value, document.getElementById('apiMethod').value)" value="API Call" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <label id="token" style="display:none;"></label>
+    <script src="/Scripts/Auth.js"></script>
+</body>
+</html>

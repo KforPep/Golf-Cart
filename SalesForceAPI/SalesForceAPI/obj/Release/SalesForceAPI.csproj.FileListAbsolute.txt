@@ -1,0 +1,7 @@
+C:\Users\jeshleman\documents\visual studio 2015\Projects\SalesForceAPI\SalesForceAPI\bin\SalesForceAPI.dll.config
+C:\Users\jeshleman\documents\visual studio 2015\Projects\SalesForceAPI\SalesForceAPI\bin\SalesForceAPI.dll
+C:\Users\jeshleman\documents\visual studio 2015\Projects\SalesForceAPI\SalesForceAPI\bin\SalesForceAPI.pdb
+C:\Users\jeshleman\documents\visual studio 2015\Projects\SalesForceAPI\SalesForceAPI\bin\AjaxMin.dll
+C:\Users\jeshleman\documents\visual studio 2015\Projects\SalesForceAPI\SalesForceAPI\obj\Release\SalesForceAPI.csprojResolveAssemblyReference.cache
+C:\Users\jeshleman\documents\visual studio 2015\Projects\SalesForceAPI\SalesForceAPI\obj\Release\SalesForceAPI.dll
+C:\Users\jeshleman\documents\visual studio 2015\Projects\SalesForceAPI\SalesForceAPI\obj\Release\SalesForceAPI.pdb

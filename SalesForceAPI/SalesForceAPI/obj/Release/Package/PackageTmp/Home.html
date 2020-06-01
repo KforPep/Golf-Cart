@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/sb-admin-2.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <script src="./Scripts/jquery-1.10.2.min.js"></script>
+    <script src="./Scripts/bootstrap.min.js"></script>
+    <script src="./Scripts/jsforce.min.js"></script>
+    <!--<script src="https://login.salesforce.com/services/Soap/c/32.0"></script>-->
+    <script src="https://na174.salesforce.com/soap/ajax/32.0/connection.js"></script>
+    <script src="https://na174.salesforce.com/soap/ajax/32.0/apex.js"></script>
+</head>
+<body>
+        <div class="col-xl-6 m-auto">
+            <h3 style="text-align:center">Attemting OAuth Authentication into Salesforce</h3>
+        </div>
+        <div class="row" style="margin-top:40px;">
+            <div class="col-xl-6 m-auto">
+                <div class="col-xl-10 m-auto">
+                    <div class="card mb-1 m-auto">
+                        <div class="card-header" style="text-align:center">
+                           Authenticate
+                        </div>
+                        <div class="card-body" style="text-align:center">
+                            <button id="btnDoIt" class="btn btn-primary btn-sm" onclick="login()">Do It</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./Scripts/Connect.js"></script>
+    </body>
+<!--<script>
+    //$(function () {
+    //    if (location.protocol != 'https:') {
+    //        location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+    //    }
+    //})
+</script>-->
+</html>

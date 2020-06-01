@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/sb-admin-2.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/Style.css" />
+    <script src="./Scripts/jquery-1.10.2.min.js"></script>
+    <script src="./Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <label id="aToken" style="display:none"></label>
+    <label id="rToken" style="display:none"></label>
+    <div class="col-xl-6 m-auto">
+        <h3 style="text-align:center">Attemting OAuth Authentication into Salesforce</h3>
+    </div>
+    <div class="row" style="margin-top:40px;">
+        <div class="col-xl-6 col-sm-6">
+            <div class="col-xl-10 col-sm-10 m-auto">
+                <div class="card mb-1 m-auto">
+                    <div class="card-header" style="text-align:center">
+                        Confirmation
+                    </div>
+                    <div class="card-body" style="text-align:center">
+                        <label id="lblConfirm"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-sm-6">
+            <div class="col-xl-10 col-sm-10 m-auto">
+                <div class="card mb-1 m-auto">
+                    <div class="card-header" style="text-align:center">
+                        Data
+                    </div>
+                    <div class="card-body" style="text-align:center">
+                        <button id="btnDoIt" onclick="getUrlVars()" class="btn btn-primary btn-sm">getUrlVars()</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6 col-sm-6" style="margin-top:40px; margin-left:25%; margin-right:25%">
+        <div class="card mb-1" id="apiFields" style="text-align:center; display:none;">
+            <div class="card-header">
+                Use a Salesforce API to retrieve data
+            </div>
+            <div class="card-body">
+                <table class="m-auto">
+                    <tr>
+                        <td>url = https://na174.lightning.force.com/services/data/v39.0/ </td>
+                        <td><input type="text" id="apiURL" /></td>
+                    </tr>
+                    <tr>
+                        <td>Request Method:</td>
+                        <td><input type="text" id="apiMethod" /></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="card-footer">
+                <input type="button" class="btn btn-primary btn-sm" onclick="apiCall(document.getElementById('apiURL').value, document.getElementById('apiMethod').value)" value="API Call" />
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            checkUrl()
+        })
+    </script>
+    <script src="./Scripts/Auth.js"></script>
+</body>
+</html>
